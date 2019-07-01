@@ -38,12 +38,22 @@ $navbar-default-bg:#1a0000;
 }
 
 .article-actions{
-  border-top: 1px solid #ff4d4d;
+  border-top: 1px solid #eaeaea;
   padding-top: 5px;
 }
 
 .description{
   margin-top: 0;
+}
+
+.article-title{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body{
+  padding-top: 15px;
+  padding-bottom: 15px
 }
 
 footer{
