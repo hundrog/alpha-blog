@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article)
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
       flash[:success] = "Article was successfully updated"
       redirect_to article_path(@article)
     else
-      render 'edit'
+      render "edit"
     end
   end
 
@@ -51,7 +51,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :description)
+    params.require(:article).permit(:title, :description, category_ids: [])
   end
 
   def require_same_user
@@ -60,5 +60,4 @@ class ArticlesController < ApplicationController
       redirect_to root_path
     end
   end
-
 end
