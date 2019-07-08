@@ -1,6 +1,6 @@
 require "test_helper"
 
-class SignupTest < ActionDispatch::IntegrationTest
+class SignupUserTest < ActionDispatch::IntegrationTest
   test "get signup user and create user" do
     get signup_path
     assert_template "users/new"
